@@ -1,7 +1,7 @@
 ---
 title: "Group Presentation"
 subtitle: "⚔<br/>with xaringan"
-author: "Group"
+author: "Group chestnut"
 institute: "RStudio, PBC"
 date: "2025/3/25 (updated: `r Sys.Date()`)"
 output:
