@@ -1,0 +1,50 @@
+/*
+.remark-slide-content {
+  background: url("MapManchester.jpg") no-repeat center center;
+  background-size: cover;
+}
+*/
+
+/* 只对有 class 'bg2' 的页面加背景 */
+.bg2 {
+  background: url("MapManchester.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/* 针对带背景页的标题样式 */
+.bg2 h1.bg-title {
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  text-align: center;
+  color: blue;         /* ← 加上蓝色字体 */
+  margin-top: 200px;   /* 可根据背景图调整上下位置 */
+}
+
+/* 整页内容垂直水平居中 */
+.bg2 .remark-slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* 封面背景样式 */
+.cover-bg {
+  background: url("floodcover.jpg") no-repeat center center;
+  background-size: cover;
+  color: white;
+}
+
+/* 让封面内容居中 */
+.cover-bg .remark-slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-shadow: 1px 1px 3px black;
+}
+
+
+
