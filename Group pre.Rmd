@@ -11,23 +11,47 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      
 ---
-
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
-
 ```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+
 ```
-
-???
-
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
-
+part 1
 ---
 Part 2
-
 ---
 Part 3
+---
+Introduce of Part 4
+---
+<h1 style="color:Blue; text-align:center; font-family: 'Times New Roman', serif;">Time Line</h1>
+
+<p style="text-align:center;">
+This page outlines the monthly timeline for the Manchester Flood Risk Management project.
+</p>
+
+
+```{r, out.width="100%", fig.align='center'}
+knitr::include_graphics("timeline.png")
+
+
+```
 
 ---
-Part 4
+
+<h1 style="color:blue; text-align:center; font-family: 'Times New Roman', serif;">Project Budget</h1>
+
+<p style="text-align:center;">
+Below is the detailed budget breakdown for each module, along with a high-level timeline mapping.
+</p>
+
+```{r, out.width="100%", fig.align='center'}
+knitr::include_graphics("budget.png")
+
+```
+---
+
+
+
+
