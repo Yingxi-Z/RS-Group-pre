@@ -1,26 +1,59 @@
-/*
-.remark-slide-content {
-  background: url("MapManchester.jpg") no-repeat center center;
-  background-size: cover;
+/* 通用样式 */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', serif;
+  line-height: 1.6;
 }
-*/
 
-/* 只对有 class 'bg2' 的页面加背景 */
+/* 封面页样式 */
+.title-slide {
+  background: url("floodcover.jpg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 60px;
+  text-shadow: 1px 1px 3px black;
+}
+
+.title-slide .remark-slide-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.title-slide h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.title-slide h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.title-slide h3,
+.title-slide h4 {
+  font-size: 24px;
+}
+
+/* 背景页样式 */
 .bg2 {
   background: url("MapManchester.jpg") no-repeat center center;
   background-size: cover;
 }
 
-/* 针对带背景页的标题样式 */
+/* 背景页样式2 */
+.bg5 {
+  background: url("timeline2.jpg") no-repeat center center;
+  background-size: cover;
+
 .bg2 h1.bg-title {
-  font-family: 'Times New Roman', serif;
-  font-weight: bold;
+  color: blue;
+  margin-top: 200px;
   text-align: center;
-  color: blue;         /* ← 加上蓝色字体 */
-  margin-top: 200px;   /* 可根据背景图调整上下位置 */
+  font-weight: bold;
 }
 
-/* 整页内容垂直水平居中 */
 .bg2 .remark-slide-content {
   display: flex;
   flex-direction: column;
@@ -29,22 +62,89 @@
   height: 100%;
 }
 
-/* 封面背景样式 */
-.cover-bg {
-  background: url("floodcover.jpg") no-repeat center center;
-  background-size: cover;
-  color: white;
+/* ===== 修改后的时间线布局 ===== */
+.timeline-layout {
+  display: grid;
+  grid-template-columns: 75% 25%;  /* 调整比例：3:1 */
+  gap: 30px;                       /* 缩小间隙 */
+  max-width: 1400px;               /* 增加最大宽度 */
+  margin: 30px auto;
+  padding: 0 15px;                 /* 减少两侧留白 */
 }
 
-/* 让封面内容居中 */
-.cover-bg .remark-slide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/* 图片容器增强 */
+.image-side {
+  position: sticky;
+  top: 20px;
+  height: 90vh;                    /* 增加高度 */
+  background: rgba(255,255,255,0.97);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2); /* 增强立体阴影 */
+  margin-right: -20px;             /* 向右扩展 */
+}
+
+.image-side img {
+  width: 100%;
   height: 100%;
-  text-shadow: 1px 1px 3px black;
+  max-height: 850px;               /* 增加最大高度 */
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
+/* 文字容器极简化 */
+.phase-content {
+  background: rgba(255,255,255,0.97);
+  padding: 20px;                   /* 减少内边距 */
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  font-size: 15px;                 /* 缩小字号 */
+  line-height: 1.5;
+  margin-left: -15px;              /* 向左扩展 */
+  max-height: 85vh;                /* 限制高度 */
+  overflow-y: auto;                /* 添加滚动条 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .timeline-layout {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  
+  .image-side {
+    height: 60vh;                  /* 移动端保持较大高度 */
+    margin: 0 -15px;               /* 全宽显示 */
+    border-radius: 0;
+  }
+  
+  .phase-content {
+    margin: 0 -15px;
+    max-height: none;
+    font-size: 14px;
+  }
+}
+
+.budget-bg {
+  background: url("budgetmap.png") no-repeat center center;
+  background-size: contain;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.budget-bg .remark-slide-content {
+  background-color: rgba(255,255,255,0.4); /* 半透明层 */
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* 背景页样式 */
+.bg10 {
+  background: url("Manchetser.jpg") no-repeat center center;
+  background-size: cover;
+}
 
 
