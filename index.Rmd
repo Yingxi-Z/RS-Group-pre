@@ -6,20 +6,34 @@ date: "2025/3/25 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["style.css"]
+    css: ["style1.css"]
     nature:
+      slideNumberFormat: "%current%"
       ratio: "16:9" 
       highlightStyle: github
       highlightLines: true
-      countIncrementalSlides: false
+      countIncrementalSlides: true
+    self_contained: true
+    html_document:
+      filename: "index.html"  
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 
 ```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#685bc6",
+  secondary_color = "#000000",
+  inverse_header_color = "#FFFFFF"
+)
+```
+
 part 1
 ---
-Part 2
+# 
 ---
 Part 3
 ---
