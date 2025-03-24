@@ -19,22 +19,63 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 part 1
 ---
-Part 2
----
-Part 3
----
-<!-- 顶部边框 -->
-<div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0056b3 0%, #0083FF 100%);"></div>
+<div style="display: flex; height: 100vh; align-items: stretch;">
 
- <!-- 固定标题 -->
- <h1 id="main-title">Social Impact Assessment</h1>
+  <!-- 左边：文字内容 -->
+  <div style="width: 55%; padding-right: 30px; box-sizing: border-box;">
+    <h2 style="font-size: 24px;">Sustainable Development Goals (SDGs)</h2>
+    
+    <p><strong>SDG 11: Sustainable Cities and Communities</strong><br>
+    Improving flood resilience directly supports SDG 11, which aims to make cities inclusive, safe, resilient, and sustainable. Flooding prevention measures align with building resilient infrastructure and ensuring access to safe public spaces.</p>
+    
+    <p><strong>SDG 13: Climate Action</strong><br>
+    Addressing flooding contributes to climate adaptation strategies by reducing vulnerability to climate change impacts, thus fulfilling global climate action goals.</p>
+    
+    <p><strong>Sendai Framework for Disaster Risk Reduction</strong><br>
+    Greater Manchester’s flood risk management plan aligns with the Sendai Framework, particularly in strengthening disaster risk reduction efforts and enhancing early warning systems to minimize disaster impacts.</p>
+  </div>
 
- <div class="Social Impact Assessment">
+  <!-- 右边：图片展示 -->
+  <div style="width: 45%; display: flex; justify-content: center; align-items: center;">
+    <img src="part1sdg.png" style="max-height: 90vh; max-width: 100%; object-fit: contain;">
+  </div>
+
+</div>
 
 ---
-5
+<div style="display: flex; height: 100vh; align-items: stretch;">
+
+  <!-- 左边区域（说明 + 小图） -->
+  <div style="width: 50%; padding-right: 20px; box-sizing: border-box;">
+    <h3 style="font-size: 24px;">Functional Modules & Visual Risk Mapping</h3>
+    <ul>
+      <li><strong>Map Display:</strong><br>
+          Base map(Mapbox)+risk layer overlay<br>
+          click-to-query risk values and detailed indicators for any location
+      </li>
+      <li><strong>Real-time Alerts:</strong><br>
+          push notifications for high-risk areas<br>
+          display monitoring station water level change curves
+      </li>
+    </ul>
+    <img src="p3d52.png" style="height: 250px; margin-top: 10px;">
+  </div>
+
+  <!-- 右边区域（图像占满整个右边） -->
+  <div style="width: 50%; display: flex; justify-content: center; align-items: center;">
+    <img src="p3d5.png" style="max-height: 100vh; max-width: 96%; object-fit: contain;">
+  </div>
+
+</div>
+
+
 ---
-6
+
+# Global Flood Mapper
+
+<div style="text-align: center;">
+  <img src="gfmPortalGif.gif" style="width: 90%;">
+</div>
 ---
 class: bg2
 
