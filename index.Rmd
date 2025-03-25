@@ -298,7 +298,7 @@ class: inverse center middle
 .pull-right[
 <div style="text-align: center;">
   <img src="Files/boxingday-prop.png" alt="Flood Image" width="100%">
-  <p><em>Number of Properties affected (1 km x 1 km grid).</em></p>
+  <p><em>Number of Properties affected (1 km x 1 km grid, World Bank).</em></p>
 </div>
 ]
 ---
@@ -314,7 +314,7 @@ class: inverse center middle
 .pull-right[
 <div style="text-align: center;">
   <img src="Files/boxingday-prop.png" alt="Flood Image" width="100%">
-  <p><em>Number of Properties affected (1 km x 1 km grid).</em></p>
+  <p><em>Number of Properties affected (1 km x 1 km grid, World Bank).</em></p>
 </div>
 ]
 ---
@@ -330,7 +330,7 @@ class: inverse center middle
 .pull-right[
 <div style="text-align: center;">
   <img src="Files/river-irwell.png" alt="Flood Image" width="100%">
-  <p><em>River level (Blue line graph) Irwell and Rainfall (Blue bar graph).</em></p>
+  <p><em>River level (Blue line graph) Irwell and Rainfall (Blue bar graph) (World Bank).</em></p>
 </div>
 ]
 ---
