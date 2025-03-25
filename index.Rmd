@@ -876,7 +876,7 @@ class: thank-bg, center, middle
 </h1>
 
 ---
-# References list
+# References
 Greater Manchester Combined Authority. Who we are. Available at: https://www.greatermanchester-ca.gov.uk/who-we-are/
 
 About Manchester. Boxing Day floods were the worst ever. Available at: https://aboutmanchester.co.uk/boxing-day-floods-were-the-worst-ever/ 
