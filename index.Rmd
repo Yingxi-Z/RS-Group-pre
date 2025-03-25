@@ -175,7 +175,7 @@ style_duo_accent(
 ```{r echo=FALSE}
 knitr::include_graphics('Files/gm-eng.png')
 ```
-
+*(Greater Manchester Moving)*
 The 10 regions which form the Greater Manchester:
 **Bolton, Bury, Manchester, Oldham, Rochdale, Salford, Stockport, Tameside, Trafford, and Wigan**
 
@@ -231,7 +231,7 @@ class: inverse center middle
 .pull-right[
 <div style="text-align: center;">
   <img src="Files/rainfall-26.png" alt="Flood Image" width="80%">
-  <p><em>Rainfall intensity across Greater Manchester at 8am on Boxing Day.</em></p>
+  <p><em>Rainfall intensity across Greater Manchester at 8am on Boxing Day. (World Bank)</em></p>
 </div>
 ]
 ---
@@ -250,7 +250,7 @@ class: inverse center middle
 .pull-right[
 <div style="text-align: center;">
   <img src="Files/rainfall-26.png" alt="Flood Image" width="80%">
-  <p><em>Rainfall intensity across Greater Manchester at 8am on Boxing Day.</em></p>
+  <p><em>Rainfall intensity across Greater Manchester at 8am on Boxing Day. (World Bank)</em></p>
 </div>
 ]
 ---
@@ -269,7 +269,7 @@ class: inverse center middle
 .pull-right[
 <div style="text-align: center;">
   <img src="Files/surface-flooding-areas.png" alt="Flood Image" width="100%">
-  <p><em>Surface water flooding hotspot areas (2024).</em></p>
+  <p><em>Surface water flooding hotspot areas of 2024 (GM CCRA).</em></p>
 </div>
 ]
 ---
