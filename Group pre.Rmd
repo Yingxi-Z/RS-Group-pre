@@ -19,10 +19,124 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 part 1
 ---
-Part 2
----
-Part 3
+<div style="display: flex; height: 100vh; align-items: stretch;">
 
+  <!-- 左边：文字内容 -->
+  <div style="width: 55%; padding-right: 30px; box-sizing: border-box;">
+    <h2 style="font-size: 24px;">Sustainable Development Goals (SDGs)</h2>
+    
+    <p><strong>SDG 11: Sustainable Cities and Communities</strong><br>
+    Improving flood resilience directly supports SDG 11, which aims to make cities inclusive, safe, resilient, and sustainable. Flooding prevention measures align with building resilient infrastructure and ensuring access to safe public spaces.</p>
+    
+    <p><strong>SDG 13: Climate Action</strong><br>
+    Addressing flooding contributes to climate adaptation strategies by reducing vulnerability to climate change impacts, thus fulfilling global climate action goals.</p>
+    
+    <p><strong>Sendai Framework for Disaster Risk Reduction</strong><br>
+    Greater Manchester’s flood risk management plan aligns with the Sendai Framework, particularly in strengthening disaster risk reduction efforts and enhancing early warning systems to minimize disaster impacts.</p>
+  </div>
+
+ 
+  <div style="width: 45%; overflow: hidden;">
+    <img src="part1sdg.png" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+
+</div>
+---
+class: bg2
+
+<div style="
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+">
+
+  <div style="
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  ">
+    <h1 style="
+      color: white;
+      font-size: 64px;
+      text-shadow: 2px 2px 8px black;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      letter-spacing: 1px;
+    ">
+      How to work
+    </h1>
+  </div>
+
+</div>
+
+---
+# Workflow Plan
+
+<div style="text-align: center;">
+  <img src="workflow.png" style="width: 90%;">
+</div>
+
+---
+#### Data Selection and Calculation of Indicators
+1.Topographic Data: SRTM DEM (30m)
+- Elevation (El) ; Slope (Sl); Slope Aspect (SA) ; River Distance (RD)
+- Watercourse Density (WRD): Total river length / Watershed area
+- Topographic Wetness Index (TWI): ln(Flow accumulation / tan(Slope))
+
+2.Remote Sensing Data: Landsat 8 (30m)
+- NDVI: (Band5 - Band4) / (Band5 + Band4)
+- NDWI: (Band3 - Band5) / (Band3 + Band5)
+- Land Use (LU)
+
+3.Meteorological Data: CHIRPS (downscaled to 30m)
+- Maximum 1-Day Precipitation (MIDP): maximum daily precipitation for 40 days between historical flood events
+
+4.Pedological Data: Harmonized World Soil Database (downscaled to 30m)
+- Soil Texture (ST): 1-8 (sand → clay)
+
+---
+#### Random Forest Modelling
+<div style="text-align: center;">
+  <img src="RF modeling.png" style="width: 90%;">
+</div>
+---
+<div style="display: flex; height: 100vh; align-items: stretch;">
+
+  <!-- 左边区域 -->
+  <div style="width: 50%; padding-right: 20px; box-sizing: border-box;">
+    <h3 style="font-size: 24px;">Visual Risk Mapping</h3>
+    <ul>
+      <li><strong>Map Display:</strong><br>
+          Base map(Mapbox)+risk layer overlay<br>
+          click-to-query risk values and detailed indicators for any location
+      </li>
+    </ul>
+    <img src="p3d52.png" style="height: 250px; margin-top: 10px;">
+    <div style="font-size: 16px; color: #666; margin-top: 10px; text-align: left;">
+      Source: Farhadi and Najafzadeh, 2021
+    </div>
+  </div>
+
+  <!-- 右边区域 -->
+  <div style="width: 50%; display: flex; justify-content: center; align-items: center;">
+    <img src="p3d5.png" style="max-height: 100vh; max-width: 80%; object-fit: contain;">
+  </div>
+
+</div>
+
+
+---
+
+### Sample Dashboard Preview -- functional modules
+
+<div style="text-align: center;">
+  <img src="交互式设计.png" style="width: 90%;">
+  <div style="font-size: 16px; color: #666; margin-top: 10px; text-align: center;">
+      Source: global_flood_mapper Lab, 2023
+    </div>
+</div>
 
 ---
 class: bg2
@@ -71,32 +185,32 @@ class: bg5
 
   /* 固定标题样式 */
   #main-title {
-    color: #0077cc;       /* 蓝色 */
-    font-weight: bold;    /* 加粗 */
-    text-align: center;   /* 居中 */
-    font-size: 32px;      /* 适当放大字号 */
+    color: #0077cc;       
+    font-weight: bold;    
+    text-align: center;   
+    font-size: 32px;     
     margin-top: 20px;
     margin-bottom: 0;
   }
 
- /* 时间线容器 */
+  /* 时间线 */
   .timeline-layout {
     display: flex;
     gap: 20px;
     padding: 30px 20px;
     max-width: 1400px;
     margin: 0 auto;
-    margin-top: 20px; /* 与标题稍作间隔 */
+    margin-top: 20px; 
   }
 
-  /* 左侧标签栏 - 缩小字体 */
+  /* 左侧标签栏 */
   .left-tabs {
     width: 18%;
     min-width: 180px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    font-size: 14px; /* 缩小字体 */
+    font-size: 14px;
   }
 
   .tab {
@@ -123,7 +237,7 @@ class: bg5
     color: #888;
   }
 
-  /* 内容容器 - 增大占比 */
+  /* 内容框架增大占比 */
   .content-container {
     flex: 1;
     display: flex;
@@ -131,7 +245,7 @@ class: bg5
     min-height: 600px;
   }
 
-  /* 文字内容区 - 详细阶段内容 */
+  /* 文字内容区 */
   .phase-content {
     flex: 1;
     display: none;
@@ -183,13 +297,13 @@ class: bg5
     position: sticky;
     top: 20px;
     height: fit-content;
-    display: flex;              /* 新增：让内部内容可用 flex 居中 */
-    justify-content: center;    /* 水平居中 */
-    align-items: center;        /* 垂直居中 */
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
   }
 
   .image-side img {
-    max-width: 100%;           /* 不超出容器宽度，保持比例 */
+    max-width: 100%;           
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -203,24 +317,24 @@ class: bg5
       padding: 20px;
     }
     
-    .left-tabs {
+   .left-tabs {
       width: 100%;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 10px;
     }
     
-    .tab {
+   .tab {
       flex: 1 1 48%;
       font-size: 13px;
       padding: 10px;
     }
     
-    .content-container {
+   .content-container {
       flex-direction: column;
     }
     
-    .image-side {
+   .image-side {
       order: -1;
       margin-bottom: 30px;
     }
@@ -277,7 +391,7 @@ class: bg5
              • Identify budget constraints</p>
         </div>
       </div>
-      <!-- 可以在这里补充 February、March 的类似结构 -->
+      <!-- 23-->
     </div>
 
   <!-- Phase 2 详细内容 -->
@@ -323,7 +437,7 @@ class: bg5
              • Adjust thresholds as needed</p>
         </div>
       </div>
-      <!-- 可以补充 August、September 的类似结构 -->
+      <!-- 89-->
     </div>
 
   <!-- Phase 4 详细内容 -->
@@ -346,7 +460,7 @@ class: bg5
              • Project delivery & sign-off</p>
         </div>
       </div>
-      <!-- 可以补充 November、December 的类似结构 -->
+      <!-- 1112 -->
     </div>
 
   <!-- 图片区 -->
@@ -419,12 +533,11 @@ function showPhase(index) {
       <p style="color:#4A5568; font-size: 20px; line-height: 1.4; margin:0 0 15px 0;
          font-family: 'Georgia', serif;">
         Multi-year investment strategy across core capabilities<br>
-        <span style="color:#718096; font-size: 16px;">(FY2024-2026 Implementation Roadmap)</span>
+        <span style="color:#718096; font-size: 16px;">(FY Implementation Roadmap)</span>
       </p>
     </div>
   </div>
 
-  <!-- ============== 请替换原有HTML结构 ============== -->
 <div class="timeline-layout">
   
   <!-- 左边图片区 -->
@@ -435,7 +548,7 @@ function showPhase(index) {
   <!-- 右边文字区 -->
   <div class="phase-content active">
     <h3>Key Investment Areas</h3>
-    <ul>
+     <ul>
       <li>Infrastructure Modernization (35%)</li>
       <li>R&D Innovation Fund (28%)</li>
       <li>Operational Excellence (22%)</li>
@@ -472,8 +585,18 @@ class: thank-bg, center, middle
   Thank You
 </h1>
 ---
+### Reference
 
+Real-Time Flood Monitoring Based on Multi-Sensor Optical Imagery and Machine Learning
+Farhadi, H., Ebadi, H., Kiani, A., & Asgary, A. (2024). Near real-time flood monitoring using multi-sensor optical imagery and machine learning by GEE: An automatic feature-based multi-class classification approach. Remote Sensing, 16(23), 4454. 
 
+Mehmood, H., Conway, C., & Perera, D. (2021). Mapping of Flood Areas Using Landsat with Google Earth Engine Cloud Platform. Atmosphere, 12(7), 866. 
+
+Hung Mai Sy, Chinh Luu, Quynh Duy Bui, Hang Ha, Dinh Quoc Nguyen,Urban flood risk assessment using Sentinel-1 on the google earth engine: A case study in Thai Nguyen city, Vietnam,Remote Sensing Applications: Society and Environment,Volume 31,2023,100987.
+
+Farhadi, H., & Najafzadeh, M. (2021). Flood Risk Mapping by Remote Sensing Data and Random Forest Technique. Water, 13(21), 3115. 
+
+---
 
 
 

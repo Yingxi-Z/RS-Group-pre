@@ -47,6 +47,7 @@ body {
   background: url("timeline2.jpg") no-repeat center center;
   background-size: cover;
 
+/* 背景页样式3 */
 .bg2 h1.bg-title {
   color: blue;
   margin-top: 200px;
@@ -62,32 +63,32 @@ body {
   height: 100%;
 }
 
-/* ===== 修改后的时间线布局 ===== */
+/* ===== 改了后的时间线布局 ===== */
 .timeline-layout {
   display: grid;
-  grid-template-columns: 75% 25%;  /* 调整比例：3:1 */
-  gap: 30px;                       /* 缩小间隙 */
-  max-width: 1400px;               /* 增加最大宽度 */
+  grid-template-columns: 75% 25%;  
+  gap: 30px;                       
+  max-width: 1400px;               
   margin: 30px auto;
-  padding: 0 15px;                 /* 减少两侧留白 */
+  padding: 0 15px;               
 }
 
 /* 图片容器增强 */
 .image-side {
   position: sticky;
   top: 20px;
-  height: 90vh;                    /* 增加高度 */
+  height: 90vh;                   
   background: rgba(255,255,255,0.97);
   border-radius: 12px;
   padding: 15px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.2); /* 增强立体阴影 */
-  margin-right: -20px;             /* 向右扩展 */
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2); 
+  margin-right: -20px;             
 }
 
 .image-side img {
   width: 100%;
   height: 100%;
-  max-height: 850px;               /* 增加最大高度 */
+  max-height: 850px;              
   object-fit: contain;
   border-radius: 8px;
   border: 1px solid rgba(0,0,0,0.05);
@@ -96,14 +97,14 @@ body {
 /* 文字容器极简化 */
 .phase-content {
   background: rgba(255,255,255,0.97);
-  padding: 20px;                   /* 减少内边距 */
+  padding: 20px;                  
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-  font-size: 15px;                 /* 缩小字号 */
+  font-size: 15px;                 
   line-height: 1.5;
-  margin-left: -15px;              /* 向左扩展 */
-  max-height: 85vh;                /* 限制高度 */
-  overflow-y: auto;                /* 添加滚动条 */
+  margin-left: -15px;             
+  max-height: 85vh;                
+  overflow-y: auto;                
 }
 
 /* 移动端适配 */
@@ -114,8 +115,8 @@ body {
   }
   
   .image-side {
-    height: 60vh;                  /* 移动端保持较大高度 */
-    margin: 0 -15px;               /* 全宽显示 */
+    height: 60vh;                  
+    margin: 0 -15px;              
     border-radius: 0;
   }
   
@@ -135,7 +136,7 @@ body {
 }
 
 .budget-bg .remark-slide-content {
-  background-color: rgba(255,255,255,0.4); /* 半透明层 */
+  background-color: rgba(255,255,255,0.4); 
   padding: 40px;
   border-radius: 15px;
   text-align: center;
@@ -143,7 +144,7 @@ body {
 
 /* 背景页样式 */
 .bg10 {
-  background: url("Manchetser.jpg") no-repeat center center;
+  background: url("manchester.jpg") no-repeat center center;
   background-size: cover;
 }
 
