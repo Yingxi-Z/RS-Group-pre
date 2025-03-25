@@ -1,0 +1,115 @@
+---
+title: "FloodSense Manchester Project"
+subtitle: "Smart Remote Flood Monitoring in Manchester"
+author: "CASA0023 Group Project:Chuhui ,Yingxi ,YaQi ,Aadarsh"
+date: "2025/3/25 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["style.css"]
+    nature:
+      ratio: "16:9" 
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+ 
+```{r  echo=FALSE, out.width='97%', fig.align='center'}
+knitr::include_graphics('pic1.png')
+```
+**Mayor** of Greater Manchester Andy Burnham, speaking on BBC Radio Manchester on 2 January, said: “I think we do have to have a look back at the warnings. We were all taken by surprise to some degree. There was **no named storm**. There was **not a particular warning the authorities gave**.
+
+The **Environment Agency** did not comment but pointed out that it has committed **£2.4 billion to invest** over the next two years to protect people from flooding, and has plans to consult on a new strategic vision for flood investment.
+---
+```{r  echo=FALSE, out.width='80%', fig.align='center'}
+knitr::include_graphics('pic2.png')
+```
+**Frequent Flood History**: Multiple significant flooding events in 1816, 1866, 1946, 1954, 1980, 2007, 2015, and 2020. 
+
+**Policy and Planning Challenges**: Policy implementation and planning coordination when managing flood risks.
+
+**Social Vulnerability**: As the third most populous county, the area has significant social vulnerability, with low-income and marginalized communities being more susceptible to flood risks.
+---
+<!-- 固定标题 -->
+<h1 id="main-title">Flood Risk Management in Greater Manchester</h1>
+
+<!-- 左图右文容器 -->
+<div style="display: flex; align-items: flex-start; gap: 30px;">
+
+<!-- 左边图片区域 -->
+<div style="flex: 1;">
+  
+```{r echo=FALSE, out.width='100%'}
+  knitr::include_graphics('pic3.png')
+```
+
+  </div>
+
+  <!-- 右边文字区域 -->
+  <div style="flex: 2; font-size: 16px;">
+    <ol>
+      <li><strong>Data Timeliness and Frequency Issues</strong>
+        <ul>
+          <li><strong>Problem</strong>: Satellite imagery (e.g., Landsat, Sentinel-2) has long revisit periods (8 days for Landsat 8, 5 days for Sentinel-2), delaying real-time flood monitoring.</li>
+          <li><strong>Solution</strong>: Integrate high-frequency data (e.g., Sentinel-1 SAR) with drones for real-time, frequent flood monitoring.</li>
+        </ul>
+      </li>
+      <li><strong>Cloud Interference Issues</strong>
+        <ul>
+          <li><strong>Problem</strong>: Optical remote sensing imagery is impacted by cloud cover, hindering data acquisition in cloudy/rainy conditions.</li>
+          <li><strong>Solution</strong>: Use SAR data (e.g., Sentinel-1), unaffected by clouds, for continuous all-weather monitoring.</li>
+        </ul>
+      </li>
+      <li><strong>Flood Warning and Emergency Response Capacity</strong>
+        <ul>
+          <li><strong>Problem</strong>: Complex terrain and poor infrastructure hinder accuracy and timeliness in some regions.</li>
+          <li><strong>Solution</strong>: Integrate real-time data analysis and multi-source fusion (remote sensing, meteorology, sensors) to improve warning accuracy and speed.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+</div>
+---
+<!-- 固定标题 -->
+<h1 id="main-title">Flood Risk Management in Greater Manchester</h1>
+
+<!-- 左图右文容器 -->
+<div style="display: flex; align-items: flex-start; gap: 30px;">
+
+<!-- 左边图片区域 -->
+<div style="flex: 1;">
+  
+```{r echo=FALSE, out.width='100%'}
+  knitr::include_graphics('pic4.png')
+```
+  </div>
+
+  <!-- 右边文字区域 -->
+  <div style="flex: 2; font-size: 16px;">
+    <ol>
+      <li><strong>Insufficient Community Engagement and Education</strong>
+        <ul>
+          <li><strong>Problem</strong>: Lack of awareness and response ability to flood risks, especially in economically disadvantaged areas, despite government efforts.</li>
+          <li><strong>Solution</strong>: Enhance community education and participation with flood history maps and real-time monitoring apps to boost preparedness and response.</li>
+        </ul>
+      </li>
+      <li><strong>Limitations of Traditional Flood Control Measures</strong>
+        <ul>
+          <li><strong>Problem</strong>: Over-reliance on traditional engineering measures (e.g., embankments, drainage systems), facing maintenance issues and limited effectiveness.</li>
+          <li><strong>Solution</strong>: Introduce nature-based solutions (e.g., wetland restoration, tree planting) alongside traditional measures to improve sustainability and reduce dependency on hard infrastructure.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+</div>
+
+---
+Part 2
+---
