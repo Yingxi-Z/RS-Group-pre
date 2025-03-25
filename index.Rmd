@@ -6,7 +6,7 @@ date: "2025/3/25 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     lib_dir: libs
-    css: ["style1.css"]
+    css: "style1.css"
     nature:
       slideNumberFormat: "%current%"
       ratio: "16:9" 
@@ -18,22 +18,204 @@ output:
       filename: "index.html"  
 ---
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
 
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 style_duo_accent(
-  primary_color = "#685bc6",
-  secondary_color = "#000000",
+  primary_color = "#1F9FB6",
+  secondary_color = "#663399",
   inverse_header_color = "#FFFFFF"
 )
 ```
+# Greater Manchester
+.pull-left[
+- The Greater Manchester consists of 10 regions.
 
-part 1
+- These 10 regions' council together form the **Greater Manchester Combined Authority (GMCA)**
+
+- These councils work together to solve issues in the region, transport, urban planning.
+
+- The Greater Manchester has a total population of 2.9 million (Census, 2021)
+
+- The region has a Gross Value Added (GVA) of 79 billion pounds which is the largest city region economy outside of London (MIDAS)  
+]
+  
+.pull-right[
+
+
+```{r echo=FALSE}
+knitr::include_graphics('Files/gm-eng.png')
+```
+
+The 10 regions which form the Greater Manchester:
+**Bolton, Bury, Manchester, Oldham, Rochdale, Salford, Stockport, Tameside, Trafford, and Wigan**
+
+]
+
 ---
-# 
+class: inverse center middle
+
+## What are the factors that contribute to Flooding in the Greater Manchester area?
+---
+# Flooding in Greater Manchester
+
+.pull-left[
+- Greater Manchester has experienced significant flooding in recent years out of which the most disastrous one was the **2015 Boxing Day flooding**.
+
+- Historical data suggests that rainfall is one of the **major flood trigger** factors.
+  - Whether it be short-duration downpours or prolonged precipitation.
+
+- As the region is highly urbanized, **surface water flooding risk** is also there and this will only increase in the upcoming years if not taken care of.
+]
+
+.pull-right[
+<div style="text-align: center;">
+  <img src="Files/flood-2025.png" alt="Flood Image" width="50%">
+  <p><em>Flooded parking lot due to heavy rainfall on the last New Year's Eve in Greater Manchester (The Manc).</em></p>
+</div>
+]
+---
+- **Surface water flooding risk depends on a range of factors** (Greater Manchester Climate Change Risk Assessment, 2024):
+
+  1. Ground conditions (how waterlogged the ground is before a rainfall event)
+
+  2. The extent of impermeable surfaces
+
+  3. Drainage capacity or blocked drains
+
+  4. Topography of the land.
+  
+- The next important factor is **improper drainage system** due to which if the ground is saturated, then the water has nowhere to go.
+
+- As occurred during the Boxing Day 2015 floods: Storm Eva brought prolonged, **intense rainfall on catchments that were nearly waterlogged**, causing rivers to rise rapidly and overflow.
+---
+# Rainfall Intensity
+
+.pull-left[
+- Heavy precipitation is the dominant meteorological factor in Greater Manchester’s flood risk.
+
+- Cloudbursts and high-intensity rainstorms can overwhelm urban drainage, leading to flash floods.
+
+  - On 25–26 December 2015 up to 128 mm of rain fell within 36 hours in parts of the Irwell catchment north of Manchester
+]
+
+.pull-right[
+<div style="text-align: center;">
+  <img src="Files/rainfall-26.png" alt="Flood Image" width="80%">
+  <p><em>Rainfall intensity across Greater Manchester at 8am on Boxing Day.</em></p>
+</div>
+]
+---
+# Rainfall Intensity
+
+.pull-left[
+- The river level for the River Roch on Boxing Day 2015, at its downstream meeting with the Irwell, was 1.1m higher than anything recorded in its 64-year history.
+
+  - **37 of 44** river gauges in the area recorded their highest levels.
+  
+- The 2019-2020 floods in the UK, were due to **cumulative rainfall** which was also then recorded as the wettest month to be recorded recently
+
+- Climate projections (UKCP18) anticipate this pattern continuing, with warmer, **wetter winters and more intense downpours expected**.
+]
+
+.pull-right[
+<div style="text-align: center;">
+  <img src="Files/rainfall-26.png" alt="Flood Image" width="80%">
+  <p><em>Rainfall intensity across Greater Manchester at 8am on Boxing Day.</em></p>
+</div>
+]
+---
+# Drainage Systems & Surface Water Flooding
+
+.pull-left[
+- Greater Manchester’s highly urbanized landscape adds another dimension to the flood problem: **impermeable surfaces and drainage capacity**.
+  
+  -   When heavy rain falls on cities, much of it becomes runoff.
+  
+- Intense rainfall, when combined with extensive paved areas and limited drainage capacity (or blocked drains), leads to dangerous accumulations of water in low-lying urban spots.
+
+- These low lying areas with the region's old drainage system can create flood hotspots.
+]
+
+.pull-right[
+<div style="text-align: center;">
+  <img src="Files/surface-flooding-areas.png" alt="Flood Image" width="100%">
+  <p><em>Surface water flooding hotspot areas (2024).</em></p>
+</div>
+]
+---
+class: center middle
+
+## Heavy rainfall exceeding drainage capacity is the cause of urban flash floods
+---
+class: inverse center middle
+
+## Rainfall is the triggering factor and Drainage capacity is the limitation for Greater Manchester 
+---
+# Boxing Day 2015
+
+.pull-left[
+- 128mm of rain in 36 hours
+
+- 37 of 44 river gauges recorded highest-ever levels
+
+- Three river-flow gauging stations, with flows of around 1,700 m^3/s (1.7 tonnes per second)
+
+- Approx 2000 properties flooded
+
+- 7 Electricity Substations damaged which left 32000 properties without power.
+]
+
+.pull-right[
+<div style="text-align: center;">
+  <img src="Files/boxingday-prop.png" alt="Flood Image" width="100%">
+  <p><em>Number of Properties affected (1 km x 1 km grid).</em></p>
+</div>
+]
+---
+# Boxing Day 2015
+
+.pull-left[
+<div style="text-align: center;">
+  <img src="Files/gm-topo.png" alt="Flood Image" width="100%">
+  <p><em>Greater Manchester topography map.</em></p>
+</div>
+]
+
+.pull-right[
+<div style="text-align: center;">
+  <img src="Files/boxingday-prop.png" alt="Flood Image" width="100%">
+  <p><em>Number of Properties affected (1 km x 1 km grid).</em></p>
+</div>
+]
+---
+## Before and During the Floods
+.pull-left[
+- The heaviest rains from Storm Eva was experienced mostly in the North of Manchester. 
+  
+  - In the preceding days, **soils in these areas had become saturated and close to capacity**.
+  
+- The combination of prolonged average rainfall, saturated catchments, rapidly responding rivers and heavy showers on and around the 26th resulted in an **extremely rapid onset of flooding**.
+]
+
+.pull-right[
+<div style="text-align: center;">
+  <img src="Files/river-irwell.png" alt="Flood Image" width="100%">
+  <p><em>River level (Blue line graph) Irwell and Rainfall (Blue bar graph).</em></p>
+</div>
+]
 ---
 Part 3
 ---
@@ -90,8 +272,9 @@ class: bg5
   /* 通用样式 */
   body {
     margin: 0;
-    font-family: 'Times New Roman', serif;
+    /* font-family: 'Times New Roman', serif; */
     line-height: 1.6;
+    color: #000000
   }
 
   /* 固定标题样式 */
@@ -495,10 +678,26 @@ class: thank-bg, center, middle
 ">
   Thank You
 </h1>
----
-Reference
 
 ---
+# References
+Greater Manchester Combined Authority. Who we are. Available at: https://www.greatermanchester-ca.gov.uk/who-we-are/
 
+About Manchester. Boxing Day floods were the worst ever. Available at: https://aboutmanchester.co.uk/boxing-day-floods-were-the-worst-ever/ 
+
+World Bank (2022). Manchester case study. Available at: https://thedocs.worldbank.org/en/doc/67e70f6cb8dba18f836791e68faa0ac8-0070012022/original/F-Manchester-Case-Study.pdf
+
+Greater Manchester Combined Authority. Greater Manchester Climate Change Risk Assessment Report. Available at: https://www.greatermanchester-ca.gov.uk/media/qtrhgi2y/gm-ccra-report_final.pdf 
+
+---
+Greater Manchester Combined Authority. Greater Manchester 5-year environment plan. Available at: https://www.greatermanchester-ca.gov.uk/media/alnl0fsy/gmca_5-year-plan_final_digital_v3-ua.pdf 
+
+Greater Manchester Combined Authority. Greater Manchester Strategy. Available at: https://www.greatermanchester-ca.gov.uk/what-we-do/greater-manchester-strategy/ 
+
+Greater Manchester Combined Authority (2022). Corporate Plan 2022–2025. Available at: https://www.greatermanchester-ca.gov.uk/media/6734/corporate-plan-2022-2025.pdf 
+
+Harrigan, S., Prudhomme, C., Parry, S., Smith, K. and Tanguy, M. (2021). The 2019/2020 floods in the UK: A hydrological appraisal. Hydrology Research, 52(3), pp. 686–704. Available at: https://www.researchgate.net/publication/351377240_The_20192020_floods_in_the_UK_a_hydrological_appraisal
+
+Invest in Manchester. Our economy. Available at: https://www.investinmanchester.com/why-manchester/our-economy/ 
 
 
