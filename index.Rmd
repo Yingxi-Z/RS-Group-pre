@@ -222,6 +222,19 @@ class: inverse center middle
 ---
 Part 3
 ---
+<!-- 顶部边框 -->
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0056b3 0%, #0083FF 100%);"></div>
+
+ <!-- 固定标题 -->
+ <h1 id="main-title">Social Impact Assessment</h1>
+
+ <div class="Social Impact Assessment">
+
+---
+5
+---
+6
+---
 class: bg2
 
 <div style="
@@ -277,7 +290,7 @@ class: bg5
     margin-bottom: 0;
   }
 
- /* 时间线容器 */
+  /* 时间线容器 */
   .timeline-layout {
     display: flex;
     gap: 20px;
@@ -321,7 +334,7 @@ class: bg5
     color: #888;
   }
 
-  /* 内容容器 - 增大占比 */
+  /* 内容框架增大占比 */
   .content-container {
     flex: 1;
     display: flex;
@@ -381,13 +394,13 @@ class: bg5
     position: sticky;
     top: 20px;
     height: fit-content;
-    display: flex;              /* 新增：让内部内容可用 flex 居中 */
-    justify-content: center;    /* 水平居中 */
-    align-items: center;        /* 垂直居中 */
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
   }
 
   .image-side img {
-    max-width: 100%;           /* 不超出容器宽度，保持比例 */
+    max-width: 100%;           
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -401,24 +414,24 @@ class: bg5
       padding: 20px;
     }
     
-    .left-tabs {
+   .left-tabs {
       width: 100%;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 10px;
     }
     
-    .tab {
+   .tab {
       flex: 1 1 48%;
       font-size: 13px;
       padding: 10px;
     }
     
-    .content-container {
+   .content-container {
       flex-direction: column;
     }
     
-    .image-side {
+   .image-side {
       order: -1;
       margin-bottom: 30px;
     }
@@ -617,12 +630,11 @@ function showPhase(index) {
       <p style="color:#4A5568; font-size: 20px; line-height: 1.4; margin:0 0 15px 0;
          font-family: 'Georgia', serif;">
         Multi-year investment strategy across core capabilities<br>
-        <span style="color:#718096; font-size: 16px;">(FY2024-2026 Implementation Roadmap)</span>
+        <span style="color:#718096; font-size: 16px;">(FY Implementation Roadmap)</span>
       </p>
     </div>
   </div>
 
-  <!-- ============== 请替换原有HTML结构 ============== -->
 <div class="timeline-layout">
   
   <!-- 左边图片区 -->
@@ -633,7 +645,7 @@ function showPhase(index) {
   <!-- 右边文字区 -->
   <div class="phase-content active">
     <h3>Key Investment Areas</h3>
-    <ul>
+     <ul>
       <li>Infrastructure Modernization (35%)</li>
       <li>R&D Innovation Fund (28%)</li>
       <li>Operational Excellence (22%)</li>
@@ -671,6 +683,7 @@ class: thank-bg, center, middle
 </h1>
 
 ---
+<<<<<<< HEAD
 # References
 Greater Manchester Combined Authority. Who we are. Available at: https://www.greatermanchester-ca.gov.uk/who-we-are/
 
@@ -691,6 +704,11 @@ Harrigan, S., Prudhomme, C., Parry, S., Smith, K. and Tanguy, M. (2021). The 201
 
 Invest in Manchester. Our economy. Available at: https://www.investinmanchester.com/why-manchester/our-economy/ 
 
+=======
+Reference
+
+---
+>>>>>>> d57a1705afbf610e60746ee9425532333fc309ab
 
 
 

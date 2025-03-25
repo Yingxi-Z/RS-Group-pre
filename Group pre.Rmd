@@ -1,0 +1,532 @@
+---
+title: "FloodSense Manchester Project"
+subtitle: "Smart Remote Flood Monitoring in Manchester"
+author: "CASA0023 Group Project:Chuhui ,Yingxi ,YaQi ,Aadarsh"
+date: "2025/3/25 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["style.css"]
+    nature:
+      ratio: "16:9" 
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+part 1
+---
+<div style="display: flex; height: 100vh; align-items: stretch;">
+
+  <!-- 左边：文字内容 -->
+  <div style="width: 55%; padding-right: 30px; box-sizing: border-box;">
+    <h2 style="font-size: 24px;">Sustainable Development Goals (SDGs)</h2>
+    
+    <p><strong>SDG 11: Sustainable Cities and Communities</strong><br>
+    Improving flood resilience directly supports SDG 11, which aims to make cities inclusive, safe, resilient, and sustainable. Flooding prevention measures align with building resilient infrastructure and ensuring access to safe public spaces.</p>
+    
+    <p><strong>SDG 13: Climate Action</strong><br>
+    Addressing flooding contributes to climate adaptation strategies by reducing vulnerability to climate change impacts, thus fulfilling global climate action goals.</p>
+    
+    <p><strong>Sendai Framework for Disaster Risk Reduction</strong><br>
+    Greater Manchester’s flood risk management plan aligns with the Sendai Framework, particularly in strengthening disaster risk reduction efforts and enhancing early warning systems to minimize disaster impacts.</p>
+  </div>
+
+ 
+  <div style="width: 45%; overflow: hidden;">
+    <img src="part1sdg.png" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+
+</div>
+
+
+---
+<div style="display: flex; height: 100vh; align-items: stretch;">
+
+  <!-- 左边区域 -->
+  <div style="width: 50%; padding-right: 20px; box-sizing: border-box;">
+    <h3 style="font-size: 24px;">Functional Modules & Visual Risk Mapping</h3>
+    <ul>
+      <li><strong>Map Display:</strong><br>
+          Base map(Mapbox)+risk layer overlay<br>
+          click-to-query risk values and detailed indicators for any location
+      </li>
+      <li><strong>Real-time Alerts:</strong><br>
+          push notifications for high-risk areas<br>
+          display monitoring station water level change curves
+      </li>
+    </ul>
+    <img src="p3d52.png" style="height: 250px; margin-top: 10px;">
+  </div>
+
+  <!-- 右边区域 -->
+  <div style="width: 50%; display: flex; justify-content: center; align-items: center;">
+    <img src="p3d5.png" style="max-height: 100vh; max-width: 80%; object-fit: contain;">
+  </div>
+
+</div>
+
+
+---
+
+# Global Flood Mapper
+
+<div style="text-align: center;">
+  <img src="gfmPortalGif.gif" style="width: 90%;">
+</div>
+---
+class: bg2
+
+<div style="
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+">
+
+  <div style="
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  ">
+    <h1 style="
+      color: white;
+      font-size: 64px;
+      text-shadow: 2px 2px 8px black;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      letter-spacing: 1px;
+    ">
+      Plan To Work
+    </h1>
+  </div>
+
+</div>
+
+---
+class: bg5
+---
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Time-line layout</title>
+  <style>
+  /* 通用样式 */
+  body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+  }
+
+  /* 固定标题样式 */
+  #main-title {
+    color: #0077cc;       
+    font-weight: bold;    
+    text-align: center;   
+    font-size: 32px;     
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  /* 时间线 */
+  .timeline-layout {
+    display: flex;
+    gap: 20px;
+    padding: 30px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 20px; 
+  }
+
+  /* 左侧标签栏 */
+  .left-tabs {
+    width: 18%;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .tab {
+    cursor: pointer;
+    padding: 12px 15px;
+    border-left: 2px solid transparent;
+    transition: all 0.3s ease;
+    color: #666;
+    background: #f8f9fa;
+    border-radius: 4px;
+  }
+
+  .tab.active {
+    border-left: 3px solid #0077cc;
+    background: rgba(0,119,204,0.08);
+    color: #000;
+    font-weight: 600;
+  }
+
+  .phase-sub {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #888;
+  }
+
+  /* 内容框架增大占比 */
+  .content-container {
+    flex: 1;
+    display: flex;
+    gap: 40px;
+    min-height: 600px;
+  }
+
+  /* 文字内容区 */
+  .phase-content {
+    flex: 1;
+    display: none;
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+    padding-right: 30px;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  .phase-content.active {
+    display: block;
+  }
+
+  /* 新增内容样式 */
+  .month-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+
+  .month-title {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #0077cc;
+  }
+
+  .section-block {
+    margin: 12px 0;
+    padding-left: 15px;
+    border-left: 3px solid #e0e0e0;
+  }
+
+  .section-title {
+    font-weight: 600;
+    color: #0077cc;
+    margin: 8px 0;
+  }
+
+  /* 图片区 - 增大占比 + 居中 */
+  .image-side {
+    flex: 0 0 40%;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+  }
+
+  .image-side img {
+    max-width: 100%;           
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+  }
+
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .timeline-layout {
+      flex-direction: column;
+      padding: 20px;
+    }
+    
+   .left-tabs {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+   .tab {
+      flex: 1 1 48%;
+      font-size: 13px;
+      padding: 10px;
+    }
+    
+   .content-container {
+      flex-direction: column;
+    }
+    
+   .image-side {
+      order: -1;
+      margin-bottom: 30px;
+    }
+  }
+  </style>
+</head>
+<body>
+
+ <!-- 固定标题 -->
+ <h1 id="main-title">Time-line layout</h1>
+
+ <div class="timeline-layout">
+ 
+  <!-- 左侧标签 -->
+  <div class="left-tabs">
+   <div class="tab active" onclick="showPhase(0)">
+      PHASE 1<br>
+      <span class="phase-sub">Months 1–3</span>
+    </div>
+    <div class="tab" onclick="showPhase(1)">
+      PHASE 2<br>
+      <span class="phase-sub">Months 4–6</span>
+    </div>
+    <div class="tab" onclick="showPhase(2)">
+      PHASE 3<br>
+      <span class="phase-sub">Months 7–9</span>
+    </div>
+    <div class="tab" onclick="showPhase(3)">
+      PHASE 4<br>
+      <span class="phase-sub">Months 10–12</span>
+    </div>
+  </div>
+
+  <!-- 内容区 -->
+  <div class="content-container">
+
+  <!-- Phase 1 详细内容 -->
+  <div class="phase-content active" id="phase-0">
+      <div class="month-section">
+        <div class="month-title">January (Month 1)</div>
+        <div class="section-block">
+          <div class="section-title">Planning:</div>
+          <p>• Conduct project kickoff meeting with key stakeholders<br>
+             • Clarify goals for flood risk management</p>
+        </div>
+        <div class="section-block">
+          <div class="section-title">Execution:</div>
+          <p>• Gather historical flood records<br>
+             • Collect geographic boundary data</p>
+        </div>
+        <div class="section-block">
+          <div class="section-title">Evaluation:</div>
+          <p>• Initial feasibility check<br>
+             • Identify budget constraints</p>
+        </div>
+      </div>
+      <!-- 23-->
+    </div>
+
+  <!-- Phase 2 详细内容 -->
+    <div class="phase-content" id="phase-1">
+      <div class="month-section">
+        <div class="month-title">April (Month 4)</div>
+        <div class="section-block">
+          <div class="section-title">Planning:</div>
+          <p>• Define tasks for next quarter<br>
+             • Resource allocation</p>
+        </div>
+        <div class="section-block">
+          <div class="section-title">Execution:</div>
+          <p>• Develop GEE scripts<br>
+             • Data cleaning</p>
+        </div>
+        <div class="section-block">
+          <div class="section-title">Evaluation:</div>
+          <p>• Check script outputs<br>
+             • Document initial findings</p>
+        </div>
+      </div>
+      <!-- 可以补充 May、June 的类似结构 -->
+    </div>
+
+  <!-- Phase 3 详细内容 -->
+  <div class="phase-content" id="phase-2">
+      <div class="month-section">
+        <div class="month-title">July (Month 7)</div>
+        <div class="section-block">
+          <div class="section-title">Planning:</div>
+          <p>• Setup NDVI analysis pipeline<br>
+             • Confirm study area expansions</p>
+        </div>
+        <div class="section-block">
+          <div class="section-title">Execution:</div>
+          <p>• Run NDVI scripts<br>
+             • Collect NDVI results for test region</p>
+        </div>
+        <div class="section-block">
+          <div class="section-title">Evaluation:</div>
+          <p>• Validate NDVI data<br>
+             • Adjust thresholds as needed</p>
+        </div>
+      </div>
+      <!-- 89-->
+    </div>
+
+  <!-- Phase 4 详细内容 -->
+  <div class="phase-content" id="phase-3">
+      <div class="month-section">
+        <div class="month-title">October (Month 10)</div>
+        <div class="section-block">
+          <div class="section-title">Planning:</div>
+          <p>• Prepare pilot test scenario<br>
+             • Finalize deliverables timeline</p>
+        </div>
+        <div class="section-block">
+          <div class="section-title">Execution:</div>
+          <p>• Pilot test and gather feedback<br>
+             • Address issues found in pilot</p>
+        </div>
+        <div class="section-block">
+          <div class="section-title">Evaluation:</div>
+          <p>• Final review<br>
+             • Project delivery & sign-off</p>
+        </div>
+      </div>
+      <!-- 1112 -->
+    </div>
+
+  <!-- 图片区 -->
+  <div class="image-side">
+      <img id="phase-image" src="1.png" alt="Project Phase Visualization">
+    </div>
+  </div>
+</div>
+
+<script>
+// 保持原有Ja增加图片预加载
+const images = ["1.png", "2.png", "3.png", "4.png"];
+images.forEach(img => new Image().src = img);
+
+function showPhase(index) {
+  const tabs = document.querySelectorAll(".tab");
+  const contents = document.querySelectorAll(".phase-content");
+  const image = document.getElementById("phase-image");
+
+  // 移除所有 active
+  tabs.forEach(t => t.classList.remove("active"));
+  contents.forEach(c => c.classList.remove("active"));
+
+  // 给点击的 tab 和对应的内容加上 active
+  tabs[index].classList.add("active");
+  contents[index].classList.add("active");
+
+  // 切换图片
+  image.src = images[index];
+}
+</script>
+</body>
+</html>
+
+<!-- 顶部边框 -->
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0056b3 0%, #0083FF 100%);"></div>
+
+<!-- 底部水印装饰 -->
+<div style="position: absolute; bottom: 20px; right: 20px; opacity: 0.1;
+     font-family: 'Times New Roman'; font-size: 48px; color:#003366; 
+     transform: rotate(-15deg);">
+  TIMELINE LAYOUT
+</div>
+
+---
+
+<div style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+
+<!-- 顶部边框 -->
+<div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #0056b3 0%, #0083FF 100%);"></div>
+
+  <!-- 标题区块增强 -->
+  <div style="margin: 40px auto 30px; max-width: 1000px; position: relative; z-index: 1;">
+    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px;">
+      <div style="width: 40px; height: 40px; background: #0056b3; border-radius: 8px; 
+           display: flex; align-items: center; justify-content: center;">
+        <svg style="width: 24px; height: 24px; fill: white;" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+                   10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+        </svg>
+      </div>
+      <h1 style="color:#003366; margin:0; font-family: 'Times New Roman', serif; 
+          font-size: 36px; font-weight: 600; letter-spacing: -0.5px;">
+        Strategic Budget Allocation
+      </h1>
+    </div>
+
+   <!-- 子标题与装饰线 -->
+   <div style="border-left: 3px solid #0083FF; padding-left: 20px; margin-left: 60px;">
+      <p style="color:#4A5568; font-size: 20px; line-height: 1.4; margin:0 0 15px 0;
+         font-family: 'Georgia', serif;">
+        Multi-year investment strategy across core capabilities<br>
+        <span style="color:#718096; font-size: 16px;">(FY Implementation Roadmap)</span>
+      </p>
+    </div>
+  </div>
+
+<div class="timeline-layout">
+  
+  <!-- 左边图片区 -->
+  <div class="image-side">
+    <img src="budget.png" alt="Budget Visualization">
+  </div>
+
+  <!-- 右边文字区 -->
+  <div class="phase-content active">
+    <h3>Key Investment Areas</h3>
+     <ul>
+      <li>Infrastructure Modernization (35%)</li>
+      <li>R&D Innovation Fund (28%)</li>
+      <li>Operational Excellence (22%)</li>
+      <li>Talent Development (15%)</li>
+    </ul>
+  </div>
+
+</div>
+
+  <!-- 底部水印装饰 -->
+  <div style="position: absolute; bottom: 20px; right: 20px; opacity: 0.1;
+       font-family: 'Times New Roman'; font-size: 48px; color:#003366; 
+       transform: rotate(-15deg); z-index: 1;">
+    STRATEGIC FINANCE
+  </div>
+
+</div>
+---
+class: center, middle
+
+![](budgetmap.png)
+
+---
+class: thank-bg, center, middle
+
+<h1 style="
+  font-size: 64px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+">
+  Thank You
+</h1>
+---
+Reference
+
+---
+
+
+
