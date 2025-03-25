@@ -39,9 +39,6 @@ style_duo_accent(
   inverse_header_color = "#FFFFFF"
 )
 ```
-
-part 1
----
 # Greater Manchester
 .pull-left[
 - The Greater Manchester consists of 10 regions.
@@ -683,7 +680,6 @@ class: thank-bg, center, middle
 </h1>
 
 ---
-<<<<<<< HEAD
 # References
 Greater Manchester Combined Authority. Who we are. Available at: https://www.greatermanchester-ca.gov.uk/who-we-are/
 
@@ -703,12 +699,5 @@ Greater Manchester Combined Authority (2022). Corporate Plan 2022–2025. Availa
 Harrigan, S., Prudhomme, C., Parry, S., Smith, K. and Tanguy, M. (2021). The 2019/2020 floods in the UK: A hydrological appraisal. Hydrology Research, 52(3), pp. 686–704. Available at: https://www.researchgate.net/publication/351377240_The_20192020_floods_in_the_UK_a_hydrological_appraisal
 
 Invest in Manchester. Our economy. Available at: https://www.investinmanchester.com/why-manchester/our-economy/ 
-
-=======
-Reference
-
----
->>>>>>> d57a1705afbf610e60746ee9425532333fc309ab
-
 
 
